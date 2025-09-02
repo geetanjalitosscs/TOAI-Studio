@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOAI Studio - AI Data Infrastructure Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Images/Toai-logo-Photoroom.png" alt="TOAI Studio" class="logo-img">
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="login.html" class="btn-secondary">Sign In</a>
+                <a href="signup.html" class="btn-primary">Get Started</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text" data-typing="AI Data Infrastructure" data-speed="100">AI Data Infrastructure</span><br>
+                        <span data-typing="That Powers the Future" data-speed="80">That Powers the Future</span>
+                    </h1>
+                    <p class="hero-description">
+                        Transform your data into intelligent insights with TOAI Studio. 
+                        The industry-leading platform for AI data annotation, management, and automation. 
+                        Used by enterprises worldwide to build smarter AI systems.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="signup.html" class="btn-primary btn-large">Start Free Trial</a>
+                        <a href="contact.html" class="btn-outline btn-large">Watch Demo</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500M+</span>
+                            <span class="stat-label">Data Points Processed</span>
+                            <div class="progress-bar" data-percentage="95"></div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime Guarantee</span>
+                            <div class="progress-bar" data-percentage="99"></div>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Enterprise Clients</span>
+                            <div class="progress-bar" data-percentage="88"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="data-visualization">
+                        <div class="floating-elements">
+                            <div class="data-point" style="--delay: 0s;"></div>
+                            <div class="data-point" style="--delay: 0.5s;"></div>
+                            <div class="data-point" style="--delay: 1s;"></div>
+                            <div class="data-point" style="--delay: 1.5s;"></div>
+                            <div class="data-point" style="--delay: 2s;"></div>
+                        </div>
+                        <div class="neural-network">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="connection"></div>
+                            <div class="connection"></div>
+                            <div class="connection"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <p class="trust-text">Trusted by industry leaders worldwide</p>
+            <div class="trust-logos">
+                <div class="logo-item">Microsoft</div>
+                <div class="logo-item">Google</div>
+                <div class="logo-item">Amazon</div>
+                <div class="logo-item">NVIDIA</div>
+                <div class="logo-item">OpenAI</div>
+                <div class="logo-item">Tesla</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="products" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Advanced AI Data Solutions</h2>
+                <p class="section-description">
+                    Comprehensive tools and infrastructure for every stage of your AI data pipeline
+                </p>
+            </div>
+            <div class="features-grid">
+                                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100" data-tooltip="Click to learn more about Smart Annotation">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Smart Annotation</h3>
+                        <p>AI-powered annotation tools that learn from your data patterns and accelerate labeling workflows.</p>
+                        <div class="feature-highlight">Auto-labeling</div>
+                    </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200" data-tooltip="Advanced data versioning and organization">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Management</h3>
+                    <p>Centralized platform for managing, versioning, and organizing your AI datasets at scale.</p>
+                    <div class="feature-highlight">Version Control</div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300" data-tooltip="Intelligent workflow automation">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automation Engine</h3>
+                    <p>Intelligent automation that reduces manual work and ensures consistent data quality.</p>
+                    <div class="feature-highlight">Workflow Automation</div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400" data-tooltip="Enterprise-grade security features">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-grade security with compliance certifications and data privacy protection.</p>
+                    <div class="feature-highlight">SOC 2 Certified</div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500" data-tooltip="Real-time performance monitoring">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Insights</h3>
+                    <p>Real-time analytics and performance metrics to optimize your AI data operations.</p>
+                    <div class="feature-highlight">Real-time Metrics</div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600" data-tooltip="Collaborative team features">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Collaboration</h3>
+                    <p>Built-in collaboration tools for distributed teams working on AI projects.</p>
+                    <div class="feature-highlight">Multi-user Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <div class="solutions-content">
+                <div class="solutions-text">
+                    <h2 class="section-title">Solutions for Every Industry</h2>
+                    <p class="section-description">
+                        From autonomous vehicles to healthcare AI, we provide specialized solutions 
+                        for every industry's unique data challenges.
+                    </p>
+                    <div class="solution-list">
+                        <div class="solution-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>Autonomous Vehicles</h4>
+                                <p>LiDAR, camera, and sensor fusion data annotation</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <div>
+                                <h4>Healthcare AI</h4>
+                                <p>Medical imaging and clinical data processing</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div>
+                                <h4>E-commerce</h4>
+                                <p>Product catalog and recommendation systems</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <h4>Robotics</h4>
+                                <p>Computer vision and manipulation training data</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-primary">Explore All Solutions</button>
+                </div>
+                <div class="solutions-visual">
+                    <div class="industry-showcase">
+                        <div class="industry-card active" data-industry="automotive">
+                            <div class="card-content">
+                                <h4>Automotive</h4>
+                                <div class="data-preview">
+                                    <div class="annotation-demo">
+                                        <div class="floating-dots"></div>
+                                        <div class="data-lines"></div>
+                                        <div class="bounding-box"></div>
+                                        <div class="keypoint"></div>
+                                        <div class="segmentation"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industry-card" data-industry="healthcare">
+                            <div class="card-content">
+                                <h4>Healthcare</h4>
+                                <div class="data-preview">
+                                    <div class="annotation-demo">
+                                        <div class="floating-dots"></div>
+                                        <div class="data-lines"></div>
+                                        <div class="bounding-box"></div>
+                                        <div class="keypoint"></div>
+                                        <div class="segmentation"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industry-card" data-industry="retail">
+                            <div class="card-content">
+                                <h4>Retail</h4>
+                                <div class="data-preview">
+                                    <div class="annotation-demo">
+                                        <div class="floating-dots"></div>
+                                        <div class="data-lines"></div>
+                                        <div class="bounding-box"></div>
+                                        <div class="keypoint"></div>
+                                        <div class="segmentation"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-description">Choose the plan that fits your needs</p>
+            </div>
+            <div class="pricing-toggle">
+                <span>Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Annual <span class="discount">Save 20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for small teams getting started</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to 10,000 annotations</li>
+                        <li><i class="fas fa-check"></i> 5 team members</li>
+                        <li><i class="fas fa-check"></i> Basic automation</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">299</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For growing teams and enterprises</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited annotations</li>
+                        <li><i class="fas fa-check"></i> 25 team members</li>
+                        <li><i class="fas fa-check"></i> Advanced automation</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                    </ul>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">Custom</span>
+                        </div>
+                        <p>Tailored solutions for large organizations</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Professional</li>
+                        <li><i class="fas fa-check"></i> Unlimited team members</li>
+                        <li><i class="fas fa-check"></i> On-premise deployment</li>
+                        <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                        <li><i class="fas fa-check"></i> Custom SLAs</li>
+                    </ul>
+                    <button class="btn-outline">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-description">Join thousands of satisfied customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"TOAI Studio transformed our data annotation process. We reduced labeling time by 70% while improving accuracy."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="John Smith">
+                        </div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>CTO, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The automation features are incredible. Our team can now focus on high-value tasks instead of manual labeling."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="Images/sarah-johnson.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>AI Director, InnovateLab</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Enterprise-grade security and compliance features give us confidence in handling sensitive data."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Data Science Lead, GlobalTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About TOAI Studio</h2>
+                    <p class="section-description">
+                        We're revolutionizing AI data infrastructure with cutting-edge technology and innovative solutions.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>Innovation First</h4>
+                                <p>Leading the industry with breakthrough AI data technologies</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-users-cog"></i>
+                            <div>
+                                <h4>Expert Team</h4>
+                                <p>World-class engineers and data scientists driving innovation</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Global Impact</h4>
+                                <p>Serving enterprises worldwide with scalable AI solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Team Members</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Countries Served</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-description">
+                        Ready to transform your AI data pipeline? Let's discuss how TOAI Studio can help your organization.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>hello@toaistudio.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="contact-name" name="name" required>
+                                <label for="contact-name">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="contact-email" name="email" required>
+                                <label for="contact-email">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="contact-company" name="company">
+                            <label for="contact-company">Company</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contact-message" name="message" required></textarea>
+                            <label for="contact-message">Message</label>
+                        </div>
+                        <button type="submit" class="btn-primary btn-large">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your AI Data Pipeline?</h2>
+                <p class="cta-description">
+                    Join thousands of companies using TOAI Studio to build better AI systems faster.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn-primary btn-large">Start Free Trial</button>
+                    <button class="btn-outline btn-large">Schedule Demo</button>
+                </div>
+                <p class="cta-note">No credit card required • 14-day free trial • Cancel anytime</p>
+            </div>
+        </div>
+        <div class="cta-background">
+            <div class="gradient-orb orb-4"></div>
+            <div class="gradient-orb orb-5"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="Images/Toai-logo-Photoroom.png" alt="TOAI Studio" class="logo-img">
+                    </div>
+                    <p class="footer-description">
+                        The leading AI data infrastructure platform for enterprises worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Autonomous Vehicles</a></li>
+                        <li><a href="#">Healthcare AI</a></li>
+                        <li><a href="#">E-commerce</a></li>
+                        <li><a href="#">Robotics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 TOAI Studio. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
