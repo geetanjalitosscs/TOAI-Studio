@@ -3435,6 +3435,64 @@ body:not([data-theme="dark"]) .form-group label {
     filter: brightness(0) invert(1);
 }
 
+/* Mobile Overflow Fix - Minimal Changes */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Add gap between hamburger and Get Started button */
+    .hamburger {
+        margin-left: 0.75rem;
+    }
+    
+    .nav-cta {
+        margin-right: 0.75rem;
+    }
+}
+
+/* Extra small screens overflow fix */
+@media (max-width: 414px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    
+    .navbar {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    
+    /* Add gap between hamburger and Get Started button */
+    .hamburger {
+        margin-left: 0.5rem;
+    }
+    
+    .nav-cta {
+        margin-right: 0.5rem;
+    }
+}
+
 /* Theme Toggle Button */
 .theme-toggle {
     background: transparent;
