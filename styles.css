@@ -3461,6 +3461,11 @@ body:not([data-theme="dark"]) .form-group label {
     .nav-cta {
         margin-right: 0.75rem;
     }
+    
+    /* Add gap between toggle button and TOAI Studio logo */
+    .theme-toggle {
+        margin-left: 1rem;
+    }
 }
 
 /* Extra small screens overflow fix */
@@ -3490,6 +3495,11 @@ body:not([data-theme="dark"]) .form-group label {
     
     .nav-cta {
         margin-right: 0.5rem;
+    }
+    
+    /* Add gap between toggle button and TOAI Studio logo */
+    .theme-toggle {
+        margin-left: 0.75rem;
     }
 }
 
