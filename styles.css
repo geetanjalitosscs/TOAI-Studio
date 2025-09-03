@@ -311,6 +311,7 @@ body {
     background: var(--gradient-hero);
     color: var(--text-white);
     overflow: hidden;
+    padding-top: 60px; /* Account for fixed navbar height */
 }
 
 .hero-container {
@@ -2879,6 +2880,18 @@ body:not([data-theme="dark"]) .form-group textarea:not(:placeholder-shown) + lab
         padding: 6px 12px;
         font-size: 0.7rem;
     }
+    
+    /* Ensure about-stats are visible on small screens */
+    .about-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .about-stat {
+        flex: none;
+        width: 100%;
+        padding: var(--spacing-lg);
+    }
 }
 
 /* Professional Hero Enhancements */
@@ -3501,6 +3514,18 @@ body:not([data-theme="dark"]) .form-group label {
     .theme-toggle {
         margin-left: 0.75rem;
     }
+    
+    /* Fix about-stats visibility on small screens */
+    .about-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .about-stat {
+        flex: none;
+        width: 100%;
+        padding: var(--spacing-lg);
+    }
 }
 
 /* Theme Toggle Button */
@@ -3845,5 +3870,32 @@ body:not([data-theme="dark"]) .form-group label {
     .auth-modal-content {
         margin: var(--spacing-lg);
         padding: var(--spacing-xl);
+    }
+}
+
+/* Override for smaller screens to ensure vertical layout */
+@media (max-width: 480px) {
+    .about-stats {
+        flex-direction: column !important;
+        gap: var(--spacing-md);
+    }
+    
+    .about-stat {
+        flex: none !important;
+        width: 100%;
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 414px) {
+    .about-stats {
+        flex-direction: column !important;
+        gap: var(--spacing-md);
+    }
+    
+    .about-stat {
+        flex: none !important;
+        width: 100%;
+        padding: var(--spacing-lg);
     }
 }
