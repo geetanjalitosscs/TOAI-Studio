@@ -311,7 +311,7 @@ body {
     background: var(--gradient-hero);
     color: var(--text-white);
     overflow: hidden;
-    padding-top: 60px; /* Account for fixed navbar height */
+    padding-top: 100px; /* Account for fixed navbar height + extra spacing */
 }
 
 .hero-container {
