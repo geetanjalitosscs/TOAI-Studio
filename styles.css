@@ -240,7 +240,7 @@ body {
 .nav-cta {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .hamburger {
@@ -2170,36 +2170,6 @@ body:not([data-theme="dark"]) .form-group textarea:not(:placeholder-shown) + lab
     100% { transform: translateX(100%); }
 }
 
-/* Professional Notification Styles */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: var(--spacing-md) var(--spacing-lg);
-    border-radius: var(--radius-md);
-    color: var(--text-white);
-    font-weight: 500;
-    z-index: 10000;
-    box-shadow: var(--shadow-xl);
-    transform: translateX(100%);
-    transition: var(--transition-normal);
-}
-
-.notification.show {
-    transform: translateX(0);
-}
-
-.notification-success {
-    background: var(--success-color);
-}
-
-.notification-error {
-    background: var(--error-color);
-}
-
-.notification-info {
-    background: var(--primary-color);
-}
 
 /* Professional Card Hover Effects */
 .feature-card,
@@ -2916,7 +2886,7 @@ body:not([data-theme="dark"]) .form-group textarea:not(:placeholder-shown) + lab
     }
     
     .nav-cta {
-        gap: var(--spacing-sm);
+        gap: 30px;
     }
     
     .nav-cta .btn-primary,
@@ -3552,6 +3522,7 @@ body:not([data-theme="dark"]) .form-group label {
     
     .nav-cta {
         margin-right: 0.5rem;
+        gap: 24px;
     }
     
     /* Add gap between toggle button and TOAI Studio logo */

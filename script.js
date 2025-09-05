@@ -434,52 +434,12 @@ function initFormValidation() {
             });
             
             if (isValid) {
-                // Show success message
-                showNotification('Form submitted successfully!', 'success');
                 form.reset();
-            } else {
-                showNotification('Please fill in all required fields.', 'error');
             }
         });
     });
 }
 
-// Notification system
-function showNotification(message, type = 'info') {
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.textContent = message;
-    
-    // Add notification styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#6366f1'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        z-index: 10000;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            notification.remove();
-        }, 300);
-    }, 3000);
-}
 
 // Lazy loading for images
 function initLazyLoading() {
@@ -631,7 +591,6 @@ function initButtonInteractions() {
                 // Simulate loading
                 setTimeout(() => {
                     spinner.remove();
-                    showNotification('Action completed successfully!', 'success');
                 }, 2000);
             }
         });
@@ -692,7 +651,6 @@ function initFormHandling() {
             const data = Object.fromEntries(formData);
             
             // Simulate form submission
-            showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
             this.reset();
             
             // Close modal if it's open
@@ -1051,7 +1009,6 @@ function handleSignup(form) {
     
     // Validate passwords match
     if (data.password !== data['confirm-password']) {
-        showNotification('Passwords do not match!', 'error');
         return;
     }
     
@@ -1063,7 +1020,6 @@ function handleSignup(form) {
     submitBtn.disabled = true;
     
     setTimeout(() => {
-        showNotification('Account created successfully! Welcome to TOAI Studio!', 'success');
         form.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
@@ -1086,7 +1042,6 @@ function handleLogin(form) {
     submitBtn.disabled = true;
     
     setTimeout(() => {
-        showNotification('Welcome back! You have been signed in successfully.', 'success');
         form.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
@@ -1105,7 +1060,6 @@ if (typeof module !== 'undefined' && module.exports) {
         initPricingToggle,
         initIndustryShowcase,
         animateCounter,
-        showNotification,
         initButtonInteractions,
         initFormHandling,
         initTooltips,
