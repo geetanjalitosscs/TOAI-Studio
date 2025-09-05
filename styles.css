@@ -3027,6 +3027,36 @@ body:not([data-theme="dark"]) .form-group textarea:not(:placeholder-shown) + lab
     color: var(--text-white);
 }
 
+/* Normal input/textarea */
+.contact-form input,
+.contact-form textarea {
+    color: var(--text-primary) !important;
+    caret-color: white !important;
+    background: var(--light-bg) !important;
+}
+
+/* Focused state */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    color: var(--text-primary) !important;
+    caret-color: white !important;
+}
+
+/* Autofill (even when not focused) */
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus,
+.contact-form input:-webkit-autofill:active,
+.contact-form textarea:-webkit-autofill,
+.contact-form textarea:-webkit-autofill:hover,
+.contact-form textarea:-webkit-autofill:focus,
+.contact-form textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--light-bg) inset !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    caret-color: white !important;
+    transition: background-color 5000s ease-in-out 0s; /* prevent flash */
+}
+
 /* Professional Scrollbar for Webkit */
 ::-webkit-scrollbar {
     width: 12px;

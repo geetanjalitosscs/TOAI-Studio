@@ -230,7 +230,8 @@ function animateCounter(element) {
     const isPlus = target.includes('+');
     const isMillion = target.includes('M');
     
-    let numericValue = parseInt(target.replace(/[^\d]/g, ''));
+    // Extract numeric value preserving decimals
+    let numericValue = parseFloat(target.replace(/[^\d.]/g, ''));
     let current = 0;
     const increment = numericValue / 100;
     const duration = 2000;
@@ -243,7 +244,7 @@ function animateCounter(element) {
             clearInterval(timer);
         }
         
-        let displayValue = Math.floor(current);
+        let displayValue = current.toFixed(1);
         if (isMillion) displayValue += 'M';
         if (isPlus) displayValue += '+';
         if (isPercentage) displayValue += '%';
