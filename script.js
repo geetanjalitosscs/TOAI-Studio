@@ -244,7 +244,15 @@ function animateCounter(element) {
             clearInterval(timer);
         }
         
-        let displayValue = current.toFixed(1);
+        let displayValue;
+        if (isPercentage && target.includes('99.9')) {
+            // Keep decimal for 99.9% Uptime Guarantee
+            displayValue = current.toFixed(1);
+        } else {
+            // Remove decimal for all other numbers
+            displayValue = Math.round(current).toString();
+        }
+        
         if (isMillion) displayValue += 'M';
         if (isPlus) displayValue += '+';
         if (isPercentage) displayValue += '%';
