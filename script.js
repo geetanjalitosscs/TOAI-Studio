@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
     initDarkMode();
     initActiveNavbar();
+    initFooterInteractions();
 });
 
 // Navigation functionality
@@ -1059,6 +1060,101 @@ function handleLogin(form) {
         const modal = form.closest('.auth-modal');
         closeModal(modal);
     }, 2000);
+}
+
+// Footer interactions
+function initFooterInteractions() {
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    const socialLinks = document.querySelectorAll('.social-link');
+    const footerBottomLinks = document.querySelectorAll('.footer-bottom-links a');
+    
+    // Add click tracking for footer links
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Add ripple effect
+            createRippleEffect(e.target, e);
+            
+            // Track analytics if needed
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'footer_link_click', {
+                    'link_text': e.target.textContent,
+                    'link_url': e.target.href
+                });
+            }
+        });
+    });
+    
+    // Add click tracking for social links
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Add ripple effect
+            createRippleEffect(e.target, e);
+            
+            // Track social media clicks
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'social_link_click', {
+                    'platform': e.target.querySelector('i').className.split('fa-')[1],
+                    'link_url': e.target.href
+                });
+            }
+        });
+    });
+    
+    // Add click tracking for footer bottom links
+    footerBottomLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Add ripple effect
+            createRippleEffect(e.target, e);
+            
+            // Track legal link clicks
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'legal_link_click', {
+                    'link_text': e.target.textContent,
+                    'link_url': e.target.href
+                });
+            }
+        });
+    });
+    
+    // Add smooth scrolling for internal links
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href.length > 1) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+}
+
+// Create ripple effect for interactive elements
+function createRippleEffect(element, event) {
+    const ripple = document.createElement('span');
+    const rect = element.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = event.clientX - rect.left - size / 2;
+    const y = event.clientY - rect.top - size / 2;
+    
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.classList.add('ripple');
+    
+    element.style.position = 'relative';
+    element.style.overflow = 'hidden';
+    element.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
 }
 
 // Export functions for testing
